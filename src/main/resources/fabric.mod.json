@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "oreberries",
   "version": "${version}",
 
   "name": "Example Mod",
@@ -19,7 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "daniking.oreberries.OreBerries"
+    ],
+    "client": [
+      "daniking.oreberries.OreBerriesClient"
     ]
   },
   "mixins": [
