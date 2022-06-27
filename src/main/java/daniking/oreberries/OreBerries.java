@@ -22,13 +22,10 @@ public final class OreBerries implements ModInitializer {
     public static final String MODID = "oreberries";
     public static final String VERSION = "1.19.1+1.0.0";
     public static final Logger LOGGER = LoggerFactory.getLogger(OreBerries.class);
-    public static final ItemGroup CREATIVE_TAB = FabricItemGroupBuilder.build(new OBIdentifier("creative_tab"), () -> new ItemStack(Items.WOODEN_SWORD));
-    public static OBConfig config;
-
+    public static final ItemGroup CREATIVE_TAB = FabricItemGroupBuilder.build(new OBIdentifier("creative_tab"), () -> new ItemStack(ObjectRegistry.COPPER_NUGGET));
     @Override
     public void onInitialize() {
-        final ConfigHolder<OBConfig> holder = AutoConfig.register(OBConfig.class, JanksonConfigSerializer::new);
-        config = holder.getConfig();
+        OBConfig.init();
         ObjectRegistry.init();
         LOGGER.info("OreBerries initialized");
     }

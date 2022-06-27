@@ -18,8 +18,8 @@ public final class ObjectRegistry {
     private static final List<ObjectDefinition<Item>> ITEMS = new ArrayList<>();
     private static final List<ObjectDefinition<Block>> BLOCKS = new ArrayList<>();
 
-
-    public static final Item COPPER_NUGGET = create("copper_nugget", new NuggetItem(getItemSettings(), DyeColor.BROWN));
+    public static final Item COPPER_NUGGET = create("copper_nugget", new NuggetItem(getItemSettings(), NuggetItem.Type.COPPER));
+    public static final Item TIN_NUGGET = create("tin_nugget", new NuggetItem(getItemSettings(), NuggetItem.Type.TIN));
 
     private static <T extends Item> T create(String path, T item) {
         ITEMS.add(new ObjectDefinition<>(item, new OBIdentifier(path)));
