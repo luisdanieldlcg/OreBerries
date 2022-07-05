@@ -1,6 +1,18 @@
 {
   "itemGroup.oreberries.creative_tab": "OreBerries",
   "item.oreberries.copper_nugget": "Copper Nugget",
-  "item.oreberries.tin_nugget": "Tin Nugget"
-
+  "item.oreberries.tin_nugget": "Tin Nugget",
+  "item.oreberries.aluminum_nugget": "Aluminum Nugget",
+  "item.oreberries.iron_oreberry": "Iron Oreberry",
+  "item.oreberries.gold_oreberry": "Gold Oreberry",
+  "item.oreberries.copper_oreberry": "Copper Oreberry",
+  "item.oreberries.tin_oreberry": "Tin Oreberry",
+  "item.oreberries.aluminum_oreberry": "Aluminum Oreberry",
+  "item.oreberries.essence_berry": "Concentrated Essence Berry",
+  "block.oreberries.iron_oreberry_bush": "Iron Oreberry Bush",
+  "block.oreberries.gold_oreberry_bush": "Gold Oreberry Bush",
+  "block.oreberries.copper_oreberry_bush": "Copper Oreberry Bush",
+  "block.oreberries.tin_oreberry_bush": "Tin Oreberry Bush",
+  "block.oreberries.aluminum_oreberry_bush": "Aluminum Oreberry Bush",
+  "block.oreberries.essence_berry_bush": "Essence Berry Bush"
 }

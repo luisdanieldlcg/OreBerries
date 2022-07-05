@@ -1,0 +1,47 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "1": "oreberries:block/oreberry_bush",
+    "particle": "oreberries:block/oreberry_bush"
+  },
+  "elements": [
+    {
+      "from": [4, 0, 4],
+      "to": [12, 8, 12],
+      "faces": {
+        "north": {"uv": [4, 8, 12, 16], "texture": "#1", "tintindex": 0},
+        "east": {"uv": [4, 8, 12, 16], "texture": "#1", "tintindex": 0},
+        "south": {"uv": [4, 8, 12, 16], "texture": "#1", "tintindex": 0},
+        "west": {"uv": [4, 8, 12, 16], "texture": "#1", "tintindex": 0},
+        "up": {"uv": [4, 4, 12, 12], "texture": "#1", "tintindex": 0},
+        "down": {"uv": [4, 4, 12, 12], "texture": "#1", "cullface": "down", "tintindex": 0}
+      }
+    }
+  ],
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [0, 45, 0],
+      "translation": [0, 2.0, 0],
+      "scale": [0.7, 0.7, 0.7]
+    },
+    "firstperson_lefthand": {
+      "rotation": [0, 45, 0],
+      "translation": [0, 2.0, 0],
+      "scale": [0.7, 0.7, 0.7]
+    },
+    "thirdperson_righthand": {
+      "rotation": [75, 45, 0],
+      "translation": [0, 2.5, 0],
+      "scale": [0.65, 0.65, 0.65]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [75, 45, 0],
+      "translation": [0, 2.5, 0],
+      "scale": [0.65, 0.65, 0.65]
+    },
+    "gui": {
+      "rotation": [30, 225, 0],
+      "translation": [0, 2.6, 0]
+    }
+  }
+}
