@@ -2,6 +2,7 @@ package daniking.oreberries.registry;
 
 import daniking.oreberries.OBConfig;
 import daniking.oreberries.block.OreBerryBushBlock;
+import daniking.oreberries.item.EssenceOreBerryItem;
 import daniking.oreberries.item.NuggetItem;
 import daniking.oreberries.item.OreBerryBushBlockItem;
 import daniking.oreberries.item.OreBerryItem;
@@ -45,7 +46,7 @@ public final class ObjectRegistry {
     public static final Block ALUMINUM_OREBERRY_BUSH = create("aluminum_oreberry_bush", new OreBerryBushBlock(getBushBlockSettings(), CONFIG_FILE.aluminum.oreBerryColor, OBHelper.OreBerryType.ALUMINUM));
     public static final Item ALUMINUM_OREBERRY = create("aluminum_oreberry", new OreBerryItem(getItemSettings(), CONFIG_FILE.aluminum.oreBerryColor, CONFIG_FILE.aluminum.tooltip));
     public static final Block ESSENCE_BERRY_BUSH = create("essence_berry_bush", new OreBerryBushBlock(getBushBlockSettings(), "", OBHelper.OreBerryType.ESSENCE));
-    public static final Item ESSENCE_BERRY = create("essence_berry", new OreBerryItem(getItemSettings(), "-1", CONFIG_FILE.essence.tooltip));
+    public static final Item ESSENCE_BERRY = create("essence_berry", new EssenceOreBerryItem(getItemSettings(), "-1", CONFIG_FILE.essence.tooltip));
 
 
     private static <T extends Block> T create(String path, T block) {

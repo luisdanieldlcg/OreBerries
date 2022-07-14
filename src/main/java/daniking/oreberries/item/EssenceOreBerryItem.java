@@ -1,9 +1,10 @@
 package daniking.oreberries.item;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.MinecraftClient;
+import net.minecraft.entity.ExperienceOrbEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -16,7 +17,14 @@ public class EssenceOreBerryItem extends OreBerryItem {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-
+        final ItemStack stack = user.getStackInHand(hand);
+        if (world instanceof ServerWorld server) {
+            ExperienceOrbEntity.spawn(server, user.getPos(), world.getRandom().nextInt(14) + 6);
+            if (!user.isCreative()) {
+                stack.decrement(1);
+            }
+            return new TypedActionResult<ItemStack>(ActionResult.CONSUME, stack);
+        }
         return super.use(world, user, hand);
     }
 }
