@@ -3,7 +3,7 @@
   "cookingtime": 100,
   "experience": 0.2,
   "ingredient": {
-    "item": "oreberries:gold_oreberry"
+    "item": "oreberries:copper_oreberry"
   },
-  "result": "minecraft:gold_nugget"
+  "result": "oreberries:copper_nugget"
 }

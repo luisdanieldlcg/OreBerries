@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "ingredient": {
+    "item": "oreberries:aluminum_oreberry"
+  },
+  "result": "oreberries:aluminum_nugget"
+}

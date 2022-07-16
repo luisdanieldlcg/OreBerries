@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "ingredient": {
+    "item": "oreberries:tin_oreberry"
+  },
+  "result": "oreberries:tin_nugget"
+}
