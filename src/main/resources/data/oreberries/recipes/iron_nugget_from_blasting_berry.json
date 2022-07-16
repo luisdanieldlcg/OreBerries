@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.2,
+  "ingredient": {
+    "item": "oreberries:iron_oreberry"
+  },
+  "result": "minecraft:iron_ingot"
+}
