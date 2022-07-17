@@ -1,6 +1,7 @@
 package daniking.oreberries;
 
 import daniking.oreberries.registry.ObjectRegistry;
+import daniking.oreberries.registry.OreBerryBushGenerator;
 import daniking.oreberries.util.OBIdentifier;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -21,6 +22,7 @@ public final class OreBerries implements ModInitializer {
     public void onInitialize() {
         OBConfig.init();
         ObjectRegistry.init();
+        OreBerryBushGenerator.init();
         LOGGER.info("OreBerries initialized");
     }
 }

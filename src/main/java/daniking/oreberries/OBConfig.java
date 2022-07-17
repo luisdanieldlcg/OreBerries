@@ -44,6 +44,9 @@ public class OBConfig implements ConfigData {
         public int maxDrop = 3;
         @Comment(value = "Min berry drops")
         public int minDrop = 1;
+        @Comment(value = "Whether this berry will be generated in the world")
+        public boolean generate = true;
+
         @Override
         public boolean growsInLight() {
             return this.growsInLight;
@@ -62,6 +65,11 @@ public class OBConfig implements ConfigData {
         public int minDrop() {
             return this.minDrop;
         }
+
+        @Override
+        public boolean generate() {
+            return this.generate;
+        }
     }
 
     public static class TinEntry implements ConfigStateAccess {
@@ -75,6 +83,9 @@ public class OBConfig implements ConfigData {
         public int maxDrop = 3;
         @Comment(value = "Min berry drops")
         public int minDrop = 1;
+
+        @Comment(value = "Whether this berry will be generated in the world")
+        public boolean generate = true;
 
         @Override
         public boolean growsInLight() {
@@ -96,7 +107,10 @@ public class OBConfig implements ConfigData {
         }
 
 
-
+        @Override
+        public boolean generate() {
+            return this.generate;
+        }
     }
 
     public static class AluminumEntry implements ConfigStateAccess {
@@ -110,6 +124,10 @@ public class OBConfig implements ConfigData {
         public int maxDrop = 3;
         @Comment(value = "Min berry drops")
         public int minDrop = 1;
+
+        @Comment(value = "Whether this berry will be generated in the world")
+        public boolean generate = true;
+
 
         @Override
         public boolean growsInLight() {
@@ -130,7 +148,10 @@ public class OBConfig implements ConfigData {
             return this.minDrop;
         }
 
-
+        @Override
+        public boolean generate() {
+            return this.generate;
+        }
     }
 
     public static class IronEntry implements ConfigStateAccess {
@@ -143,6 +164,9 @@ public class OBConfig implements ConfigData {
         public int maxDrop = 3;
         @Comment(value = "Min berry drops")
         public int minDrop = 1;
+
+        @Comment(value = "Whether this berry will be generated in the world")
+        public boolean generate = true;
 
         @Override
         public boolean growsInLight() {
@@ -163,6 +187,10 @@ public class OBConfig implements ConfigData {
             return this.minDrop;
         }
 
+        @Override
+        public boolean generate() {
+            return this.generate;
+        }
     }
 
     public static class GoldEntry implements ConfigStateAccess {
@@ -175,6 +203,9 @@ public class OBConfig implements ConfigData {
         public int maxDrop = 3;
         @Comment(value = "Min berry drops")
         public int minDrop = 1;
+
+        @Comment(value = "Whether this berry will be generated in the world")
+        public boolean generate = true;
 
         @Override
         public boolean growsInLight() {
@@ -193,7 +224,10 @@ public class OBConfig implements ConfigData {
             return ObjectRegistry.GOLD_OREBERRY;
         }
 
-
+        @Override
+        public boolean generate() {
+            return this.generate;
+        }
     }
 
     public static class EssenceEntry implements ConfigStateAccess {
@@ -204,6 +238,9 @@ public class OBConfig implements ConfigData {
         public int maxDrop = 3;
         @Comment(value = "Min berry drops")
         public int minDrop = 1;
+
+        @Comment(value = "Whether this berry will be generated in the world")
+        public boolean generate = true;
 
         @Override
         public boolean growsInLight() {
@@ -220,6 +257,10 @@ public class OBConfig implements ConfigData {
         @Override
         public Item getBerry() {
             return ObjectRegistry.ESSENCE_BERRY;
+        }
+        @Override
+        public boolean generate() {
+            return this.generate;
         }
     }
 

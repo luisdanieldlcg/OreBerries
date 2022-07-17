@@ -8,10 +8,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
@@ -30,8 +28,8 @@ import net.minecraft.world.WorldView;
 
 public class OreBerryBushBlock extends Block  implements OreBerryColorProvider {
 
-    private static final int MAX_AGE = 3;
-    private static final IntProperty AGE = Properties.AGE_3;
+    public static final int MAX_AGE = 3;
+    public static final IntProperty AGE = Properties.AGE_3;
     private static final VoxelShape[] OUTLINE_SHAPES_BY_AGE = new VoxelShape[] {
             createCuboidShape(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D),
             createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D),

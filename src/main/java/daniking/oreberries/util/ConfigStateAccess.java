@@ -27,4 +27,10 @@ public interface ConfigStateAccess {
      * @return The berry item this bush will drop.
      */
     Item getBerry();
+
+    /**
+     * @return  Whether the berry will be generated in the world.
+     */
+
+    boolean generate();
 }
