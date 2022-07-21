@@ -8,6 +8,15 @@ import net.minecraft.item.Item;
  */
 public interface ConfigStateAccess {
 
+
+    /**
+     * @return OreBerry hex color
+     */
+    String getOreBerryColor();
+    /**
+     * @return Nugget hex color
+     */
+    String getNuggetColor();
     /**
      * @return Whether the berry bush can or not grow in light.
      */
@@ -31,6 +40,25 @@ public interface ConfigStateAccess {
     /**
      * @return  Whether the berry will be generated in the world.
      */
-
     boolean generate();
+
+    /**
+     * @return Ore berry vein size
+     */
+    int veinSize();
+
+    /**
+     * @return Numbers of veins per chunk
+     */
+    int rarity();
+
+    /**
+     * @return The lowest height that these oreberry bushes will generate at. Defaults to 0.
+     */
+    int minHeight();
+
+    /**
+     * @return The highest height that these oreberry bushes will generate at.
+     */
+    int maxHeight();
 }

@@ -35,7 +35,7 @@ public class OBConfig implements ConfigData {
 
     public static class CopperEntry implements ConfigStateAccess {
         public String oreBerryColor = "#FF8833";
-        public String ingotColor = "#FF6600";
+        public String nuggetColor = "#FF6600";
         @Comment(value = "The tooltip for Copper OreBerry")
         public String tooltip = "Tastes like metal";
         @Comment(value = "Whether the berry bush can grow in the light or not")
@@ -46,6 +46,28 @@ public class OBConfig implements ConfigData {
         public int minDrop = 1;
         @Comment(value = "Whether this berry will be generated in the world")
         public boolean generate = true;
+
+        @Comment(value = "Max ore berry vein size chance. Defaults to 12.")
+        public int veinSize = 12;
+
+        @Comment(value = "Number of veins per chunk. Defaults to 6")
+        public int rarity = 6;
+
+        @Comment(value = "The lowest height where bushes will generate at. Defaults to 20.")
+        public int minHeight = 20;
+
+        @Comment(value = "The lowest height where bushes will generate at. Defaults to 64.")
+        public int maxHeight = 60;
+
+        @Override
+        public String getOreBerryColor() {
+            return oreBerryColor;
+        }
+
+        @Override
+        public String getNuggetColor() {
+            return nuggetColor;
+        }
 
         @Override
         public boolean growsInLight() {
@@ -70,11 +92,30 @@ public class OBConfig implements ConfigData {
         public boolean generate() {
             return this.generate;
         }
+
+        @Override
+        public int veinSize() {
+            return veinSize;
+        }
+
+        @Override
+        public int rarity() {
+            return rarity;
+        }
+
+        @Override
+        public int minHeight() {
+            return minHeight;
+        }
+        @Override
+        public int maxHeight() {
+            return maxHeight;
+        }
     }
 
     public static class TinEntry implements ConfigStateAccess {
         public String oreBerryColor = "#BB4422";
-        public String ingotColor = "#FFBA80";
+        public String nuggetColor = "#FFBA80";
         @Comment(value = "The tooltip for Tin OreBerry")
         public String tooltip = "Tin Man";
         @Comment(value = "Whether the berry bush can grow in the light or not")
@@ -87,6 +128,27 @@ public class OBConfig implements ConfigData {
         @Comment(value = "Whether this berry will be generated in the world")
         public boolean generate = true;
 
+        @Comment(value = "Max ore berry vein size chance")
+        public int veinSize = 12;
+
+        @Comment(value = "Number of veins per chunk. Defaults to 6")
+        public int rarity = 6;
+
+        @Comment(value = "The lowest height where bushes will generate at. Defaults to -16.")
+        public int minHeight = -16;
+
+        @Comment(value = "The lowest height where bushes will generate at. Defaults to 40.")
+        public int maxHeight = 40;
+
+        @Override
+        public String getOreBerryColor() {
+            return oreBerryColor;
+        }
+
+        @Override
+        public String getNuggetColor() {
+            return nuggetColor;
+        }
         @Override
         public boolean growsInLight() {
             return this.growsInLight;
@@ -94,6 +156,11 @@ public class OBConfig implements ConfigData {
         @Override
         public int maxDrop() {
             return this.maxDrop;
+        }
+
+        @Override
+        public int rarity() {
+            return rarity;
         }
 
         @Override
@@ -111,11 +178,24 @@ public class OBConfig implements ConfigData {
         public boolean generate() {
             return this.generate;
         }
+
+        @Override
+        public int veinSize() {
+            return veinSize;
+        }
+        @Override
+        public int minHeight() {
+            return minHeight;
+        }
+        @Override
+        public int maxHeight() {
+            return maxHeight;
+        }
     }
 
     public static class AluminumEntry implements ConfigStateAccess {
         public String oreBerryColor = "#EEFFFF";
-        public String ingotColor = "#EEFFFF";
+        public String nuggetColor = "#EEFFFF";
         @Comment(value = "The tooltip for Aluminum OreBerry")
         public String tooltip = "White Chocolate";
         @Comment(value = "Whether the berry bush can grow in the light or not")
@@ -124,11 +204,31 @@ public class OBConfig implements ConfigData {
         public int maxDrop = 3;
         @Comment(value = "Min berry drops")
         public int minDrop = 1;
-
         @Comment(value = "Whether this berry will be generated in the world")
         public boolean generate = true;
 
+        @Comment(value = "Max ore berry vein size chance")
+        public int veinSize = 14;
 
+        @Comment(value = "Number of veins per chunk. Defaults to 6")
+        public int rarity = 6;
+
+
+        @Comment(value = "The lowest height where bushes will generate at. Defaults to -16.")
+        public int minHeight = -16;
+
+        @Comment(value = "The lowest height where bushes will generate at. Defaults to 60.")
+        public int maxHeight = 60;
+
+        @Override
+        public String getOreBerryColor() {
+            return oreBerryColor;
+        }
+
+        @Override
+        public String getNuggetColor() {
+            return nuggetColor;
+        }
         @Override
         public boolean growsInLight() {
             return this.growsInLight;
@@ -152,6 +252,22 @@ public class OBConfig implements ConfigData {
         public boolean generate() {
             return this.generate;
         }
+        @Override
+        public int veinSize() {
+            return veinSize;
+        }
+        @Override
+        public int rarity() {
+            return rarity;
+        }
+        @Override
+        public int minHeight() {
+            return minHeight;
+        }
+        @Override
+        public int maxHeight() {
+            return maxHeight;
+        }
     }
 
     public static class IronEntry implements ConfigStateAccess {
@@ -168,6 +284,26 @@ public class OBConfig implements ConfigData {
         @Comment(value = "Whether this berry will be generated in the world")
         public boolean generate = true;
 
+        @Comment(value = "Max ore berry vein size chance")
+        public int veinSize = 12;
+
+        @Comment(value = "Number of veins per chunk. Defaults to 6")
+        public int rarity = 6;
+
+        @Comment(value = "The lowest height where bushes will generate at. Defaults to -16.")
+        public int minHeight = -16;
+
+        @Comment(value = "The lowest height where bushes will generate at. Defaults to sea level (64 in standard worlds).")
+        public int maxHeight = 64;
+
+        @Override
+        public String getOreBerryColor() {
+            return oreBerryColor;
+        }
+        @Override
+        public String getNuggetColor() {
+            return null;
+        }
         @Override
         public boolean growsInLight() {
             return this.growsInLight;
@@ -191,6 +327,22 @@ public class OBConfig implements ConfigData {
         public boolean generate() {
             return this.generate;
         }
+        @Override
+        public int veinSize() {
+            return veinSize;
+        }
+        @Override
+        public int rarity() {
+            return rarity;
+        }
+        @Override
+        public int minHeight() {
+            return minHeight;
+        }
+        @Override
+        public int maxHeight() {
+            return maxHeight;
+        }
     }
 
     public static class GoldEntry implements ConfigStateAccess {
@@ -207,6 +359,26 @@ public class OBConfig implements ConfigData {
         @Comment(value = "Whether this berry will be generated in the world")
         public boolean generate = true;
 
+        @Comment(value = "Max ore berry vein size chance")
+        public int veinSize = 6;
+
+        @Comment(value = "Number of veins per chunk. Defaults to 6")
+        public int rarity = 6;
+
+        @Comment(value = "The lowest height where bushes will generate at. Defaults to -16.")
+        public int minHeight = -16;
+
+        @Comment(value = "The lowest height where bushes will generate at. Defaults to 32.")
+        public int maxHeight = 32;
+
+        @Override
+        public String getOreBerryColor() {
+            return oreBerryColor;
+        }
+        @Override
+        public String getNuggetColor() {
+            return null;
+        }
         @Override
         public boolean growsInLight() {
             return this.growsInLight;
@@ -228,6 +400,22 @@ public class OBConfig implements ConfigData {
         public boolean generate() {
             return this.generate;
         }
+        @Override
+        public int veinSize() {
+            return veinSize;
+        }
+        @Override
+        public int rarity() {
+            return rarity;
+        }
+        @Override
+        public int minHeight() {
+            return minHeight;
+        }
+        @Override
+        public int maxHeight() {
+            return maxHeight;
+        }
     }
 
     public static class EssenceEntry implements ConfigStateAccess {
@@ -242,6 +430,26 @@ public class OBConfig implements ConfigData {
         @Comment(value = "Whether this berry will be generated in the world")
         public boolean generate = true;
 
+        @Comment(value = "Max ore berry vein size chance")
+        public int veinSize = 8;
+
+        @Comment(value = "Number of veins per chunk. Defaults to 6")
+        public int rarity = 6;
+
+        @Comment(value = "The lowest height where bushes will generate at. Defaults to -16.")
+        public int minHeight = -16;
+
+        @Comment(value = "The lowest height where bushes will generate at. Defaults 32.")
+        public int maxHeight = 32;
+
+        @Override
+        public String getOreBerryColor() {
+            return null;
+        }
+        @Override
+        public String getNuggetColor() {
+            return null;
+        }
         @Override
         public boolean growsInLight() {
             return this.growsInLight;
@@ -261,6 +469,22 @@ public class OBConfig implements ConfigData {
         @Override
         public boolean generate() {
             return this.generate;
+        }
+        @Override
+        public int veinSize() {
+            return veinSize;
+        }
+        @Override
+        public int rarity() {
+            return rarity;
+        }
+        @Override
+        public int minHeight() {
+            return minHeight;
+        }
+        @Override
+        public int maxHeight() {
+            return maxHeight;
         }
     }
 

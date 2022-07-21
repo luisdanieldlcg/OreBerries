@@ -47,15 +47,16 @@ public class OreBerryBushBlock extends Block  implements OreBerryColorProvider {
     private final int color;
     private final OBHelper.OreBerryType type;
 
-    public OreBerryBushBlock(Settings settings, String color, OBHelper.OreBerryType type) {
+    public OreBerryBushBlock(Settings settings, OBHelper.OreBerryType type) {
         super(settings);
         this.setDefaultState(this.getDefaultState().with(AGE, 0));
-        if (!color.isEmpty()) {
-            this.color = Integer.decode(color);
+        this.type = type;
+        if (type != OBHelper.OreBerryType.ESSENCE) {
+            this.color = Integer.decode(getConfigAccess().getOreBerryColor());
         } else {
             this.color = -1;
         }
-        this.type = type;
+
     }
 
     @Override
@@ -139,4 +140,7 @@ public class OreBerryBushBlock extends Block  implements OreBerryColorProvider {
         return OBHelper.getConfigAccessFor(this.type);
     }
 
+    public OBHelper.OreBerryType getType() {
+        return type;
+    }
 }
