@@ -42,6 +42,10 @@
     "gui": {
       "rotation": [30, 225, 0],
       "translation": [0, 2.6, 0]
+    },
+    "ground": {
+      "scale": [0.62, 0.62, 0.62],
+      "translation": [0, 4.2, 0]
     }
   }
 }

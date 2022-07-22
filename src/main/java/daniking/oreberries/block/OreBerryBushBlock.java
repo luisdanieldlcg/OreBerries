@@ -11,6 +11,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.loot.context.LootContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
@@ -25,6 +26,8 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
+
+import java.util.List;
 
 public class OreBerryBushBlock extends Block  implements OreBerryColorProvider {
 
@@ -142,5 +145,10 @@ public class OreBerryBushBlock extends Block  implements OreBerryColorProvider {
 
     public OBHelper.OreBerryType getType() {
         return type;
+    }
+
+    @Override
+    public List<ItemStack> getDroppedStacks(BlockState state, LootContext.Builder builder) {
+        return List.of(new ItemStack(this));
     }
 }

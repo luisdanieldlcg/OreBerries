@@ -47,16 +47,16 @@ public class OBConfig implements ConfigData {
         @Comment(value = "Whether this berry will be generated in the world")
         public boolean generate = true;
 
-        @Comment(value = "Max ore berry vein size chance. Defaults to 12.")
-        public int veinSize = 12;
+        @Comment(value = "Max ore berry vein size chance")
+        public int veinSize = 8;
 
         @Comment(value = "Number of veins per chunk. Defaults to 6")
         public int rarity = 6;
 
-        @Comment(value = "The lowest height where bushes will generate at. Defaults to 20.")
-        public int minHeight = 20;
+        @Comment(value = "The lowest height where bushes will generate at. Defaults to 0.")
+        public int minHeight = 0;
 
-        @Comment(value = "The lowest height where bushes will generate at. Defaults to 64.")
+        @Comment(value = "The bushes will be generated around this maximum height. Defaults to 60.")
         public int maxHeight = 60;
 
         @Override
@@ -129,15 +129,15 @@ public class OBConfig implements ConfigData {
         public boolean generate = true;
 
         @Comment(value = "Max ore berry vein size chance")
-        public int veinSize = 12;
+        public int veinSize = 8;
 
-        @Comment(value = "Number of veins per chunk. Defaults to 6")
-        public int rarity = 6;
+        @Comment(value = "Number of veins per chunk. Defaults to 7")
+        public int rarity = 7;
 
         @Comment(value = "The lowest height where bushes will generate at. Defaults to -16.")
         public int minHeight = -16;
 
-        @Comment(value = "The lowest height where bushes will generate at. Defaults to 40.")
+        @Comment(value = "The bushes will be generated around this maximum height. Defaults to 40.")
         public int maxHeight = 40;
 
         @Override
@@ -208,16 +208,16 @@ public class OBConfig implements ConfigData {
         public boolean generate = true;
 
         @Comment(value = "Max ore berry vein size chance")
-        public int veinSize = 14;
+        public int veinSize = 8;
 
-        @Comment(value = "Number of veins per chunk. Defaults to 6")
-        public int rarity = 6;
+        @Comment(value = "Number of veins per chunk. Defaults to 7")
+        public int rarity = 7;
 
 
         @Comment(value = "The lowest height where bushes will generate at. Defaults to -16.")
         public int minHeight = -16;
 
-        @Comment(value = "The lowest height where bushes will generate at. Defaults to 60.")
+        @Comment(value = "The bushes will be generated around this maximum height. Defaults to 60.")
         public int maxHeight = 60;
 
         @Override
@@ -285,15 +285,15 @@ public class OBConfig implements ConfigData {
         public boolean generate = true;
 
         @Comment(value = "Max ore berry vein size chance")
-        public int veinSize = 12;
+        public int veinSize = 9;
 
-        @Comment(value = "Number of veins per chunk. Defaults to 6")
-        public int rarity = 6;
+        @Comment(value = "Number of veins per chunk. Defaults to 10")
+        public int rarity = 10;
 
         @Comment(value = "The lowest height where bushes will generate at. Defaults to -16.")
         public int minHeight = -16;
 
-        @Comment(value = "The lowest height where bushes will generate at. Defaults to sea level (64 in standard worlds).")
+        @Comment(value = "The bushes will be generated around this maximum height. Defaults to 64.")
         public int maxHeight = 64;
 
         @Override
@@ -368,7 +368,7 @@ public class OBConfig implements ConfigData {
         @Comment(value = "The lowest height where bushes will generate at. Defaults to -16.")
         public int minHeight = -16;
 
-        @Comment(value = "The lowest height where bushes will generate at. Defaults to 32.")
+        @Comment(value = "The bushes will be generated around this maximum height. Defaults to 32.")
         public int maxHeight = 32;
 
         @Override
@@ -431,7 +431,7 @@ public class OBConfig implements ConfigData {
         public boolean generate = true;
 
         @Comment(value = "Max ore berry vein size chance")
-        public int veinSize = 8;
+        public int veinSize = 7;
 
         @Comment(value = "Number of veins per chunk. Defaults to 6")
         public int rarity = 6;
@@ -439,7 +439,7 @@ public class OBConfig implements ConfigData {
         @Comment(value = "The lowest height where bushes will generate at. Defaults to -16.")
         public int minHeight = -16;
 
-        @Comment(value = "The lowest height where bushes will generate at. Defaults 32.")
+        @Comment(value = "The bushes will be generated around this maximum height. Defaults to 32.")
         public int maxHeight = 32;
 
         @Override

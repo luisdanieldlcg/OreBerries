@@ -1,6 +1,5 @@
 package daniking.oreberries.registry;
 
-import daniking.oreberries.OBConfig;
 import daniking.oreberries.block.OreBerryBushBlock;
 import daniking.oreberries.util.ConfigStateAccess;
 import daniking.oreberries.util.OBHelper;
@@ -20,7 +19,6 @@ import java.util.List;
 
 public class OreBerryBushGenerator {
 
-    private static final OBConfig CONFIG = OBConfig.getInstance();
     // Configured Features
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> IRON_OREBERRY_BUSH = ConfiguredFeatures.register(OBIdentifier.id("iron_oreberry_bush"), Feature.ORE, getBerryBushConfig(ObjectRegistry.IRON_OREBERRY_BUSH));
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> GOLD_OREBERRY_BUSH = ConfiguredFeatures.register(OBIdentifier.id("gold_oreberry_bush"), Feature.ORE, getBerryBushConfig(ObjectRegistry.GOLD_OREBERRY_BUSH));
@@ -28,7 +26,6 @@ public class OreBerryBushGenerator {
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> TIN_OREBERRY_BUSH = ConfiguredFeatures.register(OBIdentifier.id("tin_oreberry_bush"), Feature.ORE, getBerryBushConfig(ObjectRegistry.TIN_OREBERRY_BUSH));
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ALUMINUM_OREBERRY_BUSH = ConfiguredFeatures.register(OBIdentifier.id("aluminum_oreberry_bush"), Feature.ORE, getBerryBushConfig(ObjectRegistry.ALUMINUM_OREBERRY_BUSH));
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ESSENCE_OREBERRY_BUSH = ConfiguredFeatures.register(OBIdentifier.id("essence_oreberry_bush"), Feature.ORE, getBerryBushConfig(ObjectRegistry.ESSENCE_BERRY_BUSH));
-
     // Placed Features
     public static final RegistryEntry<PlacedFeature> IRON_OREBERRY_BUS_UPPER = PlacedFeatures.register(OBIdentifier.id("iron_oreberry_upper"), IRON_OREBERRY_BUSH, oreBerryModifiers(OBHelper.OreBerryType.IRON));
     public static final RegistryEntry<PlacedFeature> GOLD_OREBERRY_BUSH_UPPER = PlacedFeatures.register(OBIdentifier.id("gold_oreberry_upper"), GOLD_OREBERRY_BUSH, oreBerryModifiers(OBHelper.OreBerryType.GOLD));
@@ -68,7 +65,7 @@ public class OreBerryBushGenerator {
     
     private static HeightRangePlacementModifier getOreBerryHeight(OBHelper.OreBerryType type) {
         final ConfigStateAccess state = OBHelper.getConfigAccessFor(type);
-        return HeightRangePlacementModifier.uniform(YOffset.fixed(state.minHeight()), YOffset.fixed(state.maxHeight()));
+        return HeightRangePlacementModifier.uniform(YOffset.fixed(state.minHeight()), YOffset.aboveBottom(state.maxHeight() - 1));
     }
 
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {

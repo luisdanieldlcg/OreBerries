@@ -4,18 +4,15 @@
   "version": "${version}",
 
   "name": "OreBerries",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Bring back a configurable version of 1.7.10 Tinkers' Construct OreBerries",
   "authors": [
-    "Me!"
+    "DanikingRD"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/members/danik1ngrd/projects",
+    "sources": "https://github.com/DanikingRD/OreBerries"
   },
-
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
+  "license": "GNU General Public License v3.0",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -25,17 +22,10 @@
       "daniking.oreberries.OreBerriesClient"
     ]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
-
   "depends": {
     "fabricloader": ">=0.14.6",
     "fabric": "*",
     "minecraft": "~1.19",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
